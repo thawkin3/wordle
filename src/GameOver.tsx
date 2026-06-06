@@ -26,6 +26,7 @@ export const GameOver = ({
   return (
     <div className="vStack">
       <div>You {hasWon ? 'win' : 'lose'}!</div>
+      {!hasWon ? <div>The word was: {secretWord}</div> : null}
       <button className="button primary" type="submit" onClick={playAgain}>
         Play again
       </button>
