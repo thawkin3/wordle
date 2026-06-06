@@ -23,14 +23,19 @@ h1 {
 }
 
 .letter {
-  height: 2rem;
-  width: 2rem;
+  height: 3rem;
+  width: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
+  font-size: 1.5rem;
   background: #ffffff;
   color: #ffffff;
+}
+
+.letter.empty {
+  border: solid 1px #d1d1d1;
 }
 
 .letter.correctLetterAndPlace {

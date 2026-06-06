@@ -1,4 +1,8 @@
 export const validateLetter = (character, characterIndex, secretWord) => {
+  if (character === ' ') {
+    return 'empty';
+  }
+
   if (secretWord[characterIndex] === character) {
     return 'correctLetterAndPlace';
   }

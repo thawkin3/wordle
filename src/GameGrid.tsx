@@ -7,6 +7,8 @@ export const GameGrid = ({
   guesses: Array<string>;
   secretWord: string;
 }) => {
+  const remainingGuesses = 5 - guesses.length;
+
   return (
     <div className="grid">
       {guesses.map((guess) => {
@@ -22,6 +24,21 @@ export const GameGrid = ({
           </div>
         );
       })}
+      {Array(remainingGuesses)
+        .fill('     ')
+        .map((guess) => {
+          return (
+            <div className="gridRow">
+              {guess.split('').map((character, characterIndex) => (
+                <Letter
+                  character={character}
+                  characterIndex={characterIndex}
+                  secretWord={secretWord}
+                />
+              ))}
+            </div>
+          );
+        })}
     </div>
   );
 };
