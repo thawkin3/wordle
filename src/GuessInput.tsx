@@ -12,7 +12,7 @@ export const GuessInput = ({
     e.preventDefault();
 
     if (currentGuess.length === 5) {
-      setGuesses((prevGuesses) => [...prevGuesses, currentGuess]);
+      setGuesses((prevGuesses) => [...prevGuesses, currentGuess.toUpperCase()]);
       setCurrentGuess('');
     }
   };
