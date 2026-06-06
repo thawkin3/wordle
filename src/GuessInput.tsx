@@ -18,14 +18,17 @@ export const GuessInput = ({
   };
   return guesses.length < 5 ? (
     <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        value={currentGuess}
-        onChange={(e) => setCurrentGuess(e.target.value)}
-      />
-      <button type="submit" disabled={currentGuess.length !== 5}>
-        Submit guess
-      </button>
+      <div className="vStack">
+        <input
+          type="text"
+          value={currentGuess}
+          onChange={(e) => setCurrentGuess(e.target.value)}
+          className="textInput"
+        />
+        <button type="submit" className="button primary" disabled={currentGuess.length !== 5}>
+          Submit guess
+        </button>
+      </div>
     </form>
   ) : null;
 };
