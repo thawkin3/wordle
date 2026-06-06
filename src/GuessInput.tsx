@@ -23,6 +23,9 @@ export const GuessInput = ({
   const hasWon = guesses.includes(secretWord);
   const hasGuessesLeft = guesses.length < 5;
 
+  const isButtonDisabled =
+    currentGuess.length !== 5 || currentGuess.includes(' ');
+
   return hasGuessesLeft && !hasWon ? (
     <form onSubmit={handleSubmit}>
       <div className="vStack">
@@ -35,7 +38,7 @@ export const GuessInput = ({
         <button
           type="submit"
           className="button primary"
-          disabled={currentGuess.length !== 5}
+          disabled={isButtonDisabled}
         >
           Submit guess
         </button>
