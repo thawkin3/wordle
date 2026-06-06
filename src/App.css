@@ -59,6 +59,8 @@ h1 {
   height: 32px;
   outline: none;
   padding: 4px 8px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .textInput:focus-visible {
@@ -98,4 +100,3 @@ h1 {
 .button.primary:not([disabled]):hover {
   background: #005db9;
 }
-
