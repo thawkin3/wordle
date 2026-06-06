@@ -1,4 +1,8 @@
-export const validateLetter = (character, characterIndex, secretWord) => {
+export const validateLetter = (
+  character: string,
+  characterIndex: number,
+  secretWord: string
+) => {
   if (character === ' ') {
     return 'empty';
   }

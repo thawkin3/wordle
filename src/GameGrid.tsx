@@ -14,13 +14,15 @@ export const GameGrid = ({
       {guesses.map((guess) => {
         return (
           <div className="gridRow">
-            {guess.split('').map((character, characterIndex) => (
-              <Letter
-                character={character}
-                characterIndex={characterIndex}
-                secretWord={secretWord}
-              />
-            ))}
+            {guess
+              .split('')
+              .map((character: string, characterIndex: number) => (
+                <Letter
+                  character={character}
+                  characterIndex={characterIndex}
+                  secretWord={secretWord}
+                />
+              ))}
           </div>
         );
       })}
@@ -29,13 +31,15 @@ export const GameGrid = ({
         .map((guess) => {
           return (
             <div className="gridRow">
-              {guess.split('').map((character, characterIndex) => (
-                <Letter
-                  character={character}
-                  characterIndex={characterIndex}
-                  secretWord={secretWord}
-                />
-              ))}
+              {guess
+                .split('')
+                .map((character: string, characterIndex: number) => (
+                  <Letter
+                    character={character}
+                    characterIndex={characterIndex}
+                    secretWord={secretWord}
+                  />
+                ))}
             </div>
           );
         })}
