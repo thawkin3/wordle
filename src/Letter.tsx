@@ -1,4 +1,4 @@
-import { validateLetter } from './utils';
+import { validateLetter } from './utils/validateLetter';
 
 export const Letter = ({
   character,
