@@ -1,6 +1,6 @@
 # Wordle
 
-Clone of the popular mobile app game, built with Vite, React, and TypeScript.
+Clone of the popular Wordle game. Built with Vite, React, and TypeScript.
 
 ## Running Locally
 
